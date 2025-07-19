@@ -1,4 +1,61 @@
 <div>
+<style>
+    .typewriter-hero {
+        overflow: hidden;
+        white-space: nowrap;
+        width: 0;
+        animation: typing-hero 2.5s steps(20, end) forwards;
+        display: inline-block;
+    }
+    
+    .typewriter-line-1 .typewriter-hero {
+        animation-delay: 0.5s;
+    }
+    
+    .typewriter-line-2 .typewriter-hero {
+        animation-delay: 3.2s;
+    }
+    
+    .typewriter-line-3 .typewriter-hero {
+        animation-delay: 6s;
+    }
+    
+    @keyframes typing-hero {
+        0% { width: 0 }
+        100% { width: 100% }
+    }
+    
+    .cursor-hero {
+        position: absolute;
+        background-color: #D4A276;
+        width: 3px;
+        height: 1.2em;
+        animation: blink-hero 1s infinite;
+        opacity: 0;
+        animation-delay: 8.5s;
+        animation-fill-mode: forwards;
+        top: 0;
+        right: -3px;
+    }
+    
+    @keyframes blink-hero {
+        0%, 50% { opacity: 1; }
+        51%, 100% { opacity: 0; }
+    }
+    
+    .hero-line {
+        display: block;
+        line-height: 1;
+        margin: 0;
+        padding: 0;
+    }
+    
+    .hero-text-container {
+        position: relative;
+        display: inline-block;
+    }
+</style>
+
 <!-- Hero Section dengan Video Background -->
 <section class="relative min-h-screen flex items-center justify-center overflow-hidden">
     <!-- Background Overlay -->
@@ -17,11 +74,25 @@
             </span>
         </div>
         
-        <h1 class="text-5xl md:text-7xl lg:text-8xl font-serif font-bold mb-8 leading-tight">
-            <span class="text-[#F5F5F0]">Where Modern</span><br>
-            <span class="text-[#D4A276] italic">Criticism</span>
-            <span class="text-[#F5F5F0]">Meets</span><br>
-            <span class="bg-gradient-to-r from-[#D4A276] to-[#F5F5F0] bg-clip-text text-transparent">Timeless Stories</span>
+        <h1 class="text-5xl md:text-7xl lg:text-8xl font-serif font-bold mb-8 leading-none">
+            <div class="hero-line typewriter-line-1">
+                <div class="hero-text-container">
+                    <span class="typewriter-hero text-[#F5F5F0]">Where Modern</span>
+                </div>
+            </div>
+            <div class="hero-line typewriter-line-2">
+                <div class="hero-text-container">
+                    <span class="typewriter-hero">
+                        <span class="text-[#D4A276] italic">Criticism</span>
+                        <span class="text-[#F5F5F0]"> Meets</span>
+                    </span>
+                </div>
+            </div>
+            <div class="hero-line typewriter-line-3">
+                <div class="hero-text-container">
+                    <span class="typewriter-hero bg-gradient-to-r from-[#D4A276] to-[#F5F5F0] bg-clip-text text-transparent" style="position: relative;">Timeless Stories<span class="cursor-hero"></span></span>
+                </div>
+            </div>
         </h1>
         
         <p class="text-xl md:text-2xl text-[#4A4A4D] mb-12 max-w-4xl mx-auto leading-relaxed font-light">
