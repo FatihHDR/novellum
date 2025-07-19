@@ -53,7 +53,7 @@
 </style>
 
 <!-- Hero Section -->
-<section class="review-hero relative min-h-[70vh] flex items-center justify-center overflow-hidden">
+<section class="review-hero relative min-h-[70vh] flex items-center justify-center overflow-hidden pt-16">
     <!-- Background Pattern -->
     <div class="absolute inset-0 opacity-10">
         <div class="absolute top-0 left-0 w-full h-full" 

@@ -77,7 +77,7 @@ document.addEventListener('DOMContentLoaded', function() {
 </script>
 
 <!-- Hero Section dengan Video Background -->
-<section class="relative min-h-screen flex items-center justify-center overflow-hidden">
+<section class="relative h-screen flex items-center justify-center overflow-hidden pt-16">
     <!-- Background Overlay -->
     <div class="absolute inset-0 bg-gradient-to-br from-[#1D1D1F] via-[#2A2A2C] to-[#1D1D1F] opacity-95"></div>
     

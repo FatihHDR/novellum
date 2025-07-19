@@ -53,7 +53,7 @@
 </style>
 
 <!-- Navigation Breadcrumb -->
-<nav class="py-6 bg-[#1D1D1F] border-b border-[#4A4A4D]">
+<nav class="py-6 bg-[#1D1D1F] border-b border-[#4A4A4D] pt-20">
     <div class="container mx-auto px-6 max-w-7xl">
         <div class="flex items-center text-sm text-[#4A4A4D]">
             <a href="/" class="hover:text-[#D4A276] transition-colors">Home</a>

@@ -35,6 +35,3 @@
         </div>
     </div>
 </nav>
-
-<!-- Spacer for fixed navbar -->
-<div class="h-16"></div>
