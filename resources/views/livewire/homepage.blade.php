@@ -4,20 +4,21 @@
         overflow: hidden;
         white-space: nowrap;
         width: 0;
-        animation: typing-hero 2.5s steps(20, end) forwards;
+        animation: typing-hero 1.8s steps(20, end) forwards;
         display: inline-block;
+        position: relative;
     }
     
     .typewriter-line-1 .typewriter-hero {
-        animation-delay: 0.5s;
+        animation-delay: 0.3s;
     }
     
     .typewriter-line-2 .typewriter-hero {
-        animation-delay: 3.2s;
+        animation-delay: 2.4s;
     }
     
     .typewriter-line-3 .typewriter-hero {
-        animation-delay: 6s;
+        animation-delay: 4.5s;
     }
     
     @keyframes typing-hero {
@@ -25,20 +26,20 @@
         100% { width: 100% }
     }
     
-    .cursor-hero {
-        position: absolute;
-        background-color: #D4A276;
-        width: 3px;
-        height: 1.2em;
-        animation: blink-hero 1s infinite;
-        opacity: 0;
-        animation-delay: 8.5s;
-        animation-fill-mode: forwards;
-        top: 0;
-        right: -3px;
+    /* Cursor menggunakan pseudo-element */
+    .typewriter-hero.show-cursor::after {
+        content: '|';
+        color: #D4A276;
+        font-weight: normal;
+        animation: blink-cursor 1s infinite;
+        margin-left: 0;
+        background: none !important;
+        -webkit-background-clip: unset !important;
+        background-clip: unset !important;
+        -webkit-text-fill-color: #D4A276 !important;
     }
     
-    @keyframes blink-hero {
+    @keyframes blink-cursor {
         0%, 50% { opacity: 1; }
         51%, 100% { opacity: 0; }
     }
@@ -55,6 +56,23 @@
         display: inline-block;
     }
 </style>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    console.log('Typewriter script loaded');
+    
+    // Tunggu sampai animasi selesai (0.3s + 1.8s + 2.4s + 1.8s + 2.1s + 1.8s = sekitar 6.6s)
+    // Lalu tampilkan cursor di akhir
+    setTimeout(() => {
+        const lastTypewriter = document.querySelector('.typewriter-line-3 .typewriter-hero');
+        console.log('Adding cursor to:', lastTypewriter);
+        if (lastTypewriter) {
+            lastTypewriter.classList.add('show-cursor');
+            console.log('Added show-cursor class');
+        }
+    }, 6600); // Tampil setelah semua animasi selesai
+});
+</script>
 
 <!-- Hero Section dengan Video Background -->
 <section class="relative min-h-screen flex items-center justify-center overflow-hidden">
@@ -90,7 +108,7 @@
             </div>
             <div class="hero-line typewriter-line-3">
                 <div class="hero-text-container">
-                    <span class="typewriter-hero bg-gradient-to-r from-[#D4A276] to-[#F5F5F0] bg-clip-text text-transparent" style="position: relative;">Timeless Stories<span class="cursor-hero"></span></span>
+                    <span class="typewriter-hero bg-gradient-to-r from-[#D4A276] to-[#F5F5F0] bg-clip-text text-transparent" style="position: relative;">Timeless Stories</span>
                 </div>
             </div>
         </h1>
