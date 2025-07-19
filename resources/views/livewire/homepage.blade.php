@@ -1,4 +1,4 @@
-<x-layouts.app>
+<div>
 <!-- Hero Section dengan Video Background -->
 <section class="relative min-h-screen flex items-center justify-center overflow-hidden">
     <!-- Background Overlay -->
@@ -349,4 +349,4 @@
         </div>
     </div>
 </section>
-</x-layouts.app>
+</div>
