@@ -15,7 +15,7 @@
             <div class="hidden md:flex items-center space-x-8">
                 <a href="/" class="text-[#F5F5F0] hover:text-[#D4A276] transition-colors font-medium">Home</a>
                 <a href="/reviews" class="text-[#F5F5F0] hover:text-[#D4A276] transition-colors font-medium">Reviews</a>
-                <a href="#" class="text-[#F5F5F0] hover:text-[#D4A276] transition-colors font-medium">Authors</a>
+                <a href="/authors" class="text-[#F5F5F0] hover:text-[#D4A276] transition-colors font-medium">Authors</a>
                 <a href="#" class="text-[#F5F5F0] hover:text-[#D4A276] transition-colors font-medium">About</a>
             </div>
             
@@ -27,11 +27,41 @@
             </div>
             
             <!-- Mobile Menu Button -->
-            <button class="md:hidden p-2 text-[#F5F5F0] hover:text-[#D4A276] transition-colors">
+            <button id="mobile-menu-button" class="md:hidden p-2 text-[#F5F5F0] hover:text-[#D4A276] transition-colors">
                 <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
                 </svg>
             </button>
         </div>
     </div>
+    
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="md:hidden fixed top-16 left-0 right-0 bg-[#1D1D1F] shadow-lg z-40 hidden">
+        <div class="py-4 space-y-2">
+            <a href="/" class="block px-6 py-3 text-[#F5F5F0] hover:text-[#D4A276] hover:bg-[#2D2D2F] transition-all">Home</a>
+            <a href="/reviews" class="block px-6 py-3 text-[#F5F5F0] hover:text-[#D4A276] hover:bg-[#2D2D2F] transition-all">Reviews</a>
+            <a href="/authors" class="block px-6 py-3 text-[#F5F5F0] hover:text-[#D4A276] hover:bg-[#2D2D2F] transition-all">Authors</a>
+            <a href="#" class="block px-6 py-3 text-[#F5F5F0] hover:text-[#D4A276] hover:bg-[#2D2D2F] transition-all">About</a>
+        </div>
+    </div>
 </nav>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        
+        if (mobileMenuButton && mobileMenu) {
+            mobileMenuButton.addEventListener('click', function() {
+                mobileMenu.classList.toggle('hidden');
+            });
+            
+            // Close mobile menu when clicking outside
+            document.addEventListener('click', function(event) {
+                if (!mobileMenuButton.contains(event.target) && !mobileMenu.contains(event.target)) {
+                    mobileMenu.classList.add('hidden');
+                }
+            });
+        }
+    });
+</script>

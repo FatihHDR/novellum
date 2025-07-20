@@ -6,16 +6,6 @@
         background: linear-gradient(135deg, #1D1D1F 0%, #2A2A2C 100%);
     }
     
-    .review-card {
-        transition: all 0.3s ease;
-        backdrop-filter: blur(10px);
-    }
-    
-    .review-card:hover {
-        transform: translateY(-8px);
-        box-shadow: 0 20px 40px rgba(212, 162, 118, 0.15);
-    }
-    
     .rating-star {
         transition: all 0.2s ease;
     }
@@ -23,6 +13,39 @@
     .rating-star.filled {
         color: #D4A276;
         transform: scale(1.1);
+    }
+    
+    .review-card-unique {
+        background: linear-gradient(145deg, rgba(42, 42, 44, 0.8) 0%, rgba(29, 29, 31, 0.9) 100%);
+        border: 1px solid rgba(212, 162, 118, 0.2);
+        backdrop-filter: blur(20px);
+        transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+        position: relative;
+        overflow: hidden;
+    }
+    
+    .review-card-unique::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: -100%;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(90deg, transparent, rgba(212, 162, 118, 0.1), transparent);
+        transition: left 0.5s;
+    }
+    
+    .review-card-unique:hover::before {
+        left: 100%;
+    }
+    
+    .review-card-unique:hover {
+        transform: translateY(-12px) scale(1.02);
+        border-color: rgba(212, 162, 118, 0.4);
+        box-shadow: 
+            0 25px 50px rgba(0, 0, 0, 0.3),
+            0 0 0 1px rgba(212, 162, 118, 0.2),
+            inset 0 1px 0 rgba(255, 255, 255, 0.1);
     }
     
     .category-filter {
@@ -135,7 +158,7 @@
             </div>
             
             <div class="group">
-                <div class="relative overflow-hidden rounded-3xl bg-gradient-to-br from-[#2A2A2C] to-[#1D1D1F] border border-[#4A4A4D] hover:border-[#D4A276] transition-all duration-500">
+                <div class="relative overflow-hidden rounded-3xl review-card-unique transition-all duration-500">
                     <div class="lg:flex">
                         <!-- Book Cover -->
                         <div class="lg:w-1/3 aspect-square lg:aspect-auto bg-gradient-to-br from-[#D4A276]/30 to-[#F5F5F0]/10 flex items-center justify-center">
@@ -217,7 +240,7 @@
             <div class="grid md:grid-cols-2 xl:grid-cols-3 gap-8">
                 <!-- Review Card 1 -->
                 <div class="group review-card">
-                    <div class="bg-gradient-to-br from-[#2A2A2C] to-[#1D1D1F] rounded-2xl p-6 border border-[#4A4A4D] hover:border-[#D4A276] h-full">
+                    <div class="review-card-unique rounded-2xl p-6 h-full">
                         <div class="aspect-[3/4] bg-gradient-to-br from-[#D4A276]/20 to-[#F5F5F0]/10 rounded-xl mb-6 flex items-center justify-center">
                             <div class="w-32 h-40 bg-[#4A4A4D] rounded-lg flex items-center justify-center">
                                 <svg class="w-16 h-16 text-[#D4A276]" fill="currentColor" viewBox="0 0 20 20">
@@ -277,7 +300,7 @@
 
                 <!-- Review Card 2 -->
                 <div class="group review-card">
-                    <div class="bg-gradient-to-br from-[#2A2A2C] to-[#1D1D1F] rounded-2xl p-6 border border-[#4A4A4D] hover:border-[#D4A276] h-full">
+                    <div class="review-card-unique rounded-2xl p-6 h-full">
                         <div class="aspect-[3/4] bg-gradient-to-br from-[#D4A276]/20 to-[#F5F5F0]/10 rounded-xl mb-6 flex items-center justify-center">
                             <div class="w-32 h-40 bg-[#4A4A4D] rounded-lg flex items-center justify-center">
                                 <svg class="w-16 h-16 text-[#D4A276]" fill="currentColor" viewBox="0 0 20 20">
@@ -337,7 +360,7 @@
 
                 <!-- Review Card 3 -->
                 <div class="group review-card">
-                    <div class="bg-gradient-to-br from-[#2A2A2C] to-[#1D1D1F] rounded-2xl p-6 border border-[#4A4A4D] hover:border-[#D4A276] h-full">
+                    <div class="review-card-unique rounded-2xl p-6 h-full">
                         <div class="aspect-[3/4] bg-gradient-to-br from-[#D4A276]/20 to-[#F5F5F0]/10 rounded-xl mb-6 flex items-center justify-center">
                             <div class="w-32 h-40 bg-[#4A4A4D] rounded-lg flex items-center justify-center">
                                 <svg class="w-16 h-16 text-[#D4A276]" fill="currentColor" viewBox="0 0 20 20">
