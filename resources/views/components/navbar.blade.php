@@ -16,7 +16,7 @@
                 <a href="/" class="text-[#F5F5F0] hover:text-[#D4A276] transition-colors font-medium">Home</a>
                 <a href="/reviews" class="text-[#F5F5F0] hover:text-[#D4A276] transition-colors font-medium">Reviews</a>
                 <a href="/authors" class="text-[#F5F5F0] hover:text-[#D4A276] transition-colors font-medium">Authors</a>
-                <a href="#" class="text-[#F5F5F0] hover:text-[#D4A276] transition-colors font-medium">About</a>
+                <a href="/about" class="text-[#F5F5F0] hover:text-[#D4A276] transition-colors font-medium">About</a>
             </div>
             
             <!-- CTA Button -->
@@ -41,7 +41,7 @@
             <a href="/" class="block px-6 py-3 text-[#F5F5F0] hover:text-[#D4A276] hover:bg-[#2D2D2F] transition-all">Home</a>
             <a href="/reviews" class="block px-6 py-3 text-[#F5F5F0] hover:text-[#D4A276] hover:bg-[#2D2D2F] transition-all">Reviews</a>
             <a href="/authors" class="block px-6 py-3 text-[#F5F5F0] hover:text-[#D4A276] hover:bg-[#2D2D2F] transition-all">Authors</a>
-            <a href="#" class="block px-6 py-3 text-[#F5F5F0] hover:text-[#D4A276] hover:bg-[#2D2D2F] transition-all">About</a>
+            <a href="/about" class="block px-6 py-3 text-[#F5F5F0] hover:text-[#D4A276] hover:bg-[#2D2D2F] transition-all">About</a>
         </div>
     </div>
 </nav>
